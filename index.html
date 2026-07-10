@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Kenangan Digital - Keluarga Besar H. Rachmad & Hj. Suparti</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FAFAFA] text-[#2C2C2C] antialiased selection:bg-[#FF5F00]/30">
+    <!-- 1. NAVBAR SECTION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#FF5F00]/10 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a href="#home" style="font-family: &quot;Chonburi&quot;, serif", serif text-xl sm:text-3xl font-bold tracking-wide text-[#2C2C2C]"> Keluarga <span class="text-[#FF5F00]">Rachmad</span> </a>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="#home" class="text-sm font-semibold hover:text-[#FF5F00] transition-colors duration-200">Beranda</a>
+            <a href="#kisah" class="text-sm font-semibold hover:text-[#FF5F00] transition-colors duration-200">Kisah</a>
+            <a href="#silsilah" class="text-sm font-semibold hover:text-[#FF5F00] transition-colors duration-200">Pilar Silsilah</a>
+            <a href="#detail-anak" class="text-sm font-semibold hover:text-[#FF5F00] transition-colors duration-200">Daftar Keturunan</a>
+            <a href="#galeri" class="text-sm font-semibold hover:text-[#FF5F00] transition-colors duration-200">Galeri</a>
+          </nav>
+
+          <div class="flex md:hidden">
+            <button id="mobile-menu-button" type="button" class="relative z-[9999] text-[#2C2C2C] hover:text-[#FF5F00] focus:outline-none">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#FF5F00]/10 px-4 pt-2 pb-6 space-y-3">
+        <a href="#home" class="block text-base font-medium px-3 py-2 rounded-md hover:bg-[#FAFAFA] hover:text-[#FF5F00]">Beranda</a>
+        <a href="#kisah" class="block text-base font-medium px-3 py-2 rounded-md hover:bg-[#FAFAFA] hover:text-[#FF5F00]">Kisah</a>
+        <a href="#silsilah" class="block text-base font-medium px-3 py-2 rounded-md hover:bg-[#FAFAFA] hover:text-[#FF5F00]">Pilar Silsilah</a>
+        <a href="#detail-anak" class="block text-base font-medium px-3 py-2 rounded-md hover:bg-[#FAFAFA] hover:text-[#FF5F00]">Daftar Keturunan</a>
+        <a href="#galeri" class="block text-base font-medium px-3 py-2 rounded-md hover:bg-[#FAFAFA] hover:text-[#FF5F00]">Galeri</a>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="relative overflow-hidden bg-zinc-900 text-white min-h-[80vh] flex items-center justify-center border-b border-[#FF5F00]/20">
+      <!-- 1. FOTO BACKGROUND (Ganti 'nama-foto-anda.jpg' dengan file foto keluarga Anda) -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url(&quot;galery/1.jpg&quot;)"></div>
+
+      <!-- 2. OVERLAY GELAP (Agar tulisan putih/emas Anda kontras dan mudah dibaca seperti di image_68f75b.png) -->
+      <div class="absolute inset-0 bg-black/70"></div>
+
+      <!-- 3. KONTEN TEKS (Berada di atas background karena menggunakan class relative) -->
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 lg:py-32">
+        <!-- Badge Atas -->
+        <span class="inline-block text-xs font-semibold tracking-widest text-[#FF5F00] uppercase mb-4 bg-[#FF5F00]/10 px-3 py-1 rounded-full border border-[#FF5F00]/20"> Buku Kenangan Digital </span>
+
+        <!-- Judul Utama (Menggunakan teks putih agar kontras dengan foto gelap) -->
+        <h1 style="font-family: &quot;Chonburi&quot;, serif" class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white leading-snug max-w-4xl mx-auto drop-shadow-md">
+          Keluarga Besar<br />
+          <span class="text-[#FF5F00]">H. Rachmad & Hj. Suparti</span>
+        </h1>
+
+        <!-- Tombol Silsilah -->
+        <div class="mt-10">
+  <a href="#silsilah"
+    class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-semibold rounded-sm text-white bg-[#FF5F00] hover:bg-[#993800] hover:shadow-lg transition-all duration-300">
+    Lihat Silsilah Keluarga
+    <svg class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
+  </a>
+</div>
+      </div>
+    </section>
+
+    <!-- 3. SEJARAH -->
+    <section id="kisah" class="max-w-4xl mx-auto px-4 py-12">
+      <!-- Subtitle Kecil Atas -->
+      <div class="text-center mb-10">
+        <span style="font-family: &quot;Chonburi&quot;, serif" class="text-xs tracking-widest text-[#FF5F00] uppercase block mb-2">— Awal Mula —</span>
+        <h2 style="font-family: &quot;Chonburi&quot;, serif" class="text-1xl md:text-2xl text-gray-800">H. Rachmad bin Kastobin (Alm) & Hj. Suparti binti Imam Nawawi</h2>
+      </div>
+
+      <!-- Kontainer Grid: Hanya 2 Foto Jajar Kanan-Kiri -->
+      <div class="grid grid-cols-2 gap-4 sm:gap-8 max-w-2xl mx-auto bg-[#ffffff] p-4 sm:p-8 rounded-lg border border-[#FF5F00] shadow-sm">
+        <!-- FOTO KIRI: H. Rachmad -->
+        <div class="text-center space-y-3">
+          <div class="relative w-full aspect-[3/4] overflow-hidden rounded-md shadow-md group">
+            <div class="absolute inset-2 border border-white/30 z-10 pointer-events-none rounded-sm"></div>
+            <!-- Ganti src dengan file foto H. Rachmad -->
+            <img src="galery/rachmad.jpg" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" alt="H. Rachmad" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+          <a href="rachmad/rachmad.html" class=" font-serif text-l font-bold text-center p-3 bg-white hover:bg-gray-50 hover:text-[#ff5000] hover:border-[#ff5000] rounded border border-gray-100 flex items-center justify-center transition duration-200 text-[#2C2C2C] shadow-sm no-underline">
+              H. Rachmad
+          </a>
+        </div>
+
+        <!-- FOTO KANAN: Hj. Suparti -->
+        <div class="text-center space-y-3">
+          <div class="relative w-full aspect-[3/4] overflow-hidden rounded-md shadow-md group">
+            <div class="absolute inset-2 border border-white/30 z-10 pointer-events-none rounded-sm"></div>
+            <!-- Ganti src dengan file foto Hj. Suparti -->
+            <img src="galery/suparti.jpg" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" alt="Hj. Suparti" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+          <a href="rachmad/suparti.html" class=" font-serif text-l font-bold text-center p-3 bg-white hover:bg-gray-50 hover:text-[#ff5000] hover:border-[#ff5000] rounded border border-gray-100 flex items-center justify-center transition duration-200 text-[#2C2C2C] shadow-sm no-underline">
+              Hj. Suparti
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PILAR SILSILAH UTAMA (INTERAKTIF) -->
+    <section id="silsilah" class="py-12 bg-[#FAFAFA] border-b border-[#FF5F00]/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- 1. Maskith -->
+          <div onclick="bukaKeluarga('maskith')" class="bg-white border border-[#FF5F00]/20 p-6 rounded-sm shadow-sm hover:shadow-md hover:border-[#FF5F00] transition-all duration-300 cursor-pointer group text-center">
+            <span class="font-serif text-xs text-[#FF5F00] tracking-widest uppercase block mb-2">Anak ke-1</span>
+            <h3 class="font-serif font-bold text-l text-[#2C2C2C] group-hover:text-[#FF5F00] transition-colors">Keluarga Maskith Siswanto & Wardninggar A H.</h3>
+            <p class="text-xs text-gray-400 mt-2 italic">Klik untuk lihat keturunan ⬇</p>
+          </div>
+
+          <!-- 2. Arin -->
+          <div onclick="bukaKeluarga('arin')" class="bg-white border border-[#FF5F00]/20 p-6 rounded-sm shadow-sm hover:shadow-md hover:border-[#FF5F00] transition-all duration-300 cursor-pointer group text-center">
+            <span class="font-serif text-xs text-[#FF5F00] tracking-widest uppercase block mb-2">Anak ke-2</span>
+            <h3 class="font-serif font-bold text-l text-[#2C2C2C] group-hover:text-[#FF5F00] transition-colors">Keluarga Arin Endrawati & Solikhin (ALM)</h3>
+            <p class="text-xs text-gray-400 mt-2 italic">Klik untuk lihat keturunan ⬇</p>
+          </div>
+
+          <!-- 3. Mawariatul -->
+          <div onclick="bukaKeluarga('mawariatul')" class="bg-white border border-[#FF5F00]/20 p-6 rounded-sm shadow-sm hover:shadow-md hover:border-[#FF5F00] transition-all duration-300 cursor-pointer group text-center">
+            <span class="font-serif text-xs text-[#FF5F00] tracking-widest uppercase block mb-2">Anak ke-3</span>
+            <h3 class="font-serif font-bold text-l text-[#2C2C2C] group-hover:text-[#FF5F00] transition-colors">Keluarga Mawariatul Janawati & Moh. Arifin</h3>
+            <p class="text-xs text-gray-400 mt-2 italic">Klik untuk lihat keturunan ⬇</p>
+          </div>
+
+          <!-- 4. Murdaning -->
+          <div onclick="bukaKeluarga('murdaning')" class="bg-white border border-[#FF5F00]/20 p-6 rounded-sm shadow-sm hover:shadow-md hover:border-[#FF5F00] transition-all duration-300 cursor-pointer group text-center">
+            <span class="font-serif text-xs text-[#FF5F00] tracking-widest uppercase block mb-2">Anak ke-4</span>
+            <h3 class="font-serif font-bold text-l text-[#2C2C2C] group-hover:text-[#FF5F00] transition-colors">Keluarga Murdaning Rachmawati & Arif (ALM)</h3>
+            <p class="text-xs text-gray-400 mt-2 italic">Klik untuk lihat keturunan ⬇</p>
+          </div>
+
+          <!-- 5. Arumawati -->
+          <div onclick="bukaKeluarga('arumawati')" class="bg-white border border-[#FF5F00]/20 p-6 rounded-sm shadow-sm hover:shadow-md hover:border-[#FF5F00] transition-all duration-300 cursor-pointer group text-center">
+            <span class="font-serif text-xs text-[#FF5F00] tracking-widest uppercase block mb-2">Anak ke-5</span>
+            <h3 class="font-serif font-bold text-l text-[#2C2C2C] group-hover:text-[#FF5F00] transition-colors">Keluarga Arumawati & Edhi Soehardono</h3>
+            <p class="text-xs text-gray-400 mt-2 italic">Klik untuk lihat keturunan ⬇</p>
+          </div>
+
+          <!-- 6. Yuli Ashofa -->
+          <div onclick="bukaKeluarga('yuli')" class="bg-white border border-[#FF5F00]/20 p-6 rounded-sm shadow-sm hover:shadow-md hover:border-[#FF5F00] transition-all duration-300 cursor-pointer group text-center">
+            <span class="font-serif text-xs text-[#FF5F00] tracking-widest uppercase block mb-2">Anak ke-6</span>
+            <h3 class="font-serif font-bold text-l text-[#2C2C2C] group-hover:text-[#FF5F00] transition-colors">Keluarga Yuli Ashofa & Heni Hartanti</h3>
+            <p class="text-xs text-gray-400 mt-2 italic">Klik untuk lihat keturunan ⬇</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. AREA DETAIL ANAK-ANAK (DINAMIS & DIARAHKAN) -->
+    <section id="detail-anak" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="placeholder-detail" class="text-center py-12 border-2 border-dashed border-gray-200 rounded-md">
+          <p class="text-gray-400 font-light">Silakan klik salah satu pilar silsilah keluarga besar di atas untuk memunculkan daftar anak-anak/keturunannya secara detail di area ini.</p>
+        </div>
+
+        <!-- Konten Detail yang akan diaktifkan via JS -->
+        <!-- 1. Detail Maskith -->
+        <div id="any-maskith" class="hidden space-y-6 bg-[#FAFAFA] border border-[#FF5F00] p-8 rounded-sm shadow-lg max-w-xl mx-auto my-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <h3 class="font-serif font-bold text-xl text-[#2C2C2C]">Keluarga Maskith Siswanto & Wardninggar A.H.</h3>
+              <span class="text-xs bg-[#FF5F00]/10 text-[#FF5F00] font-mono px-3 py-1 rounded">Yogyakarta</span>
+          </div>
+        <div>
+          <a href="maskith/maskith.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Maskith Siswanto
+          </a>
+          <a href="maskith/wardninggar.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Wardninggar A. H.
+          </a>
+        </div>
+        <div>
+        <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Daftar Anak:</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="maskith/danur.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Danur Damar Sasongko
+            </a>
+          </li>
+          <li>
+            <a href="maskith/dzaki.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Dzaki Wahyu Kuncoro
+            </a>
+          </li>
+          <li>
+            <a href="maskith/zaidan.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              3. Zaidan Akbar Satriya
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- 2. Detail Arin -->
+        <div id="any-arin" class="hidden space-y-6 bg-[#FAFAFA] border border-[#FF5F00] p-8 rounded-sm shadow-lg max-w-xl mx-auto my-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <h3 class="font-serif font-bold text-xl text-[#2C2C2C]">Keluarga Arin Endrawati & Solikhin (ALM)</h3>
+              <span class="text-xs bg-[#FF5F00]/10 text-[#FF5F00] font-mono px-3 py-1 rounded">Surabaya</span>
+          </div>
+        <div>
+          <a href="arin/arin.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Arin Endrawati
+          </a>
+          <a href="arin/solikhin.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Solikhin (ALM)
+          </a>
+        </div>
+        <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Daftar Anak / Keturunan:</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="arin/alief.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Alief Shondra Berlianto
+            </a>
+          </li>
+          <li>
+            <a href="arin/jiwanda.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Jiwanda Shondra Aprlianto
+            </a>
+          </li>
+          <li>
+            <a href="arin/takhta.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              3. Takhta Shondra Juansyah
+            </a>
+          </li>
+          <li>
+            <a href="arin/bintang.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              4. Bintang Shondra Mahaputra
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- 3. Detail Mawariatul -->
+        <div id="any-mawariatul" class="hidden space-y-6 bg-[#FAFAFA] border border-[#FF5F00] p-8 rounded-sm shadow-lg max-w-xl mx-auto my-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <h3 class="font-serif font-bold text-xl text-[#2C2C2C]">Keluarga Mawariatul Janawati & Moh. Arifin</h3>
+              <span class="text-xs bg-[#FF5F00]/10 text-[#FF5F00] font-mono px-3 py-1 rounded">Yogyakarta</span>
+          </div>
+        <div>
+          <a href="mawariatul/mawariatul.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Mawariatul Janawati
+          </a>
+          <a href="mawariatul/arifin.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Moh. Arifin
+          </a>
+        </div>
+        <div>
+        <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Daftar Anak:</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="mawariatul/thaariq.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Ath Thaariq Nur Hakim
+            </a>
+          </li>
+          <li>
+            <a href="mawariatul/tiara.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Tiara Rifdahtul Jannah
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- 4. Detail Murdaning -->
+        <div id="any-murdaning" class="hidden space-y-6 bg-[#FAFAFA] border border-[#FF5F00] p-8 rounded-sm shadow-lg max-w-xl mx-auto my-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <h3 class="font-serif font-bold text-xl text-[#2C2C2C]">Keluarga Arumawati & Edhi Soehardono</h3>
+              <span class="text-xs bg-[#FF5F00]/10 text-[#FF5F00] font-mono px-3 py-1 rounded">Bekasi</span>
+          </div>
+          <div>
+            <a href="murdaning/murdaning.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Murdaning Rachmawati
+            </a>
+            <a href="murdaning/arif.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Arif (ALM)
+            </a>
+          </div>
+          <div>
+            <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Daftar Anak:</p>
+            <ul class="space-y-3">
+              <li>
+                <a href="murdaning/khansa.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  1. Ardian Rachmanto
+                </a>
+              </li>
+              <li>
+                <a href="murdaning/ariani.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  2. Ariani Rachma Dewi
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Detail Arumawati -->
+        <div id="any-arumawati" class="hidden space-y-6 bg-[#FAFAFA] border border-[#FF5F00] p-8 rounded-sm shadow-lg max-w-xl mx-auto my-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <h3 class="font-serif font-bold text-xl text-[#2C2C2C]">Keluarga Arumawati & Edhi Soehardono</h3>
+              <span class="text-xs bg-[#FF5F00]/10 text-[#FF5F00] font-mono px-3 py-1 rounded">Bekasi</span>
+          </div>
+          <div>
+            <a href="arumawati/arumawati.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Arumawati
+            </a>
+            <a href="arumawati/edhi.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Edhi Soehardono
+            </a>
+          </div>
+          <div>
+            <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Daftar Anak:</p>
+            <ul class="space-y-3">
+              <li>
+                <a href="arumawati/khansa.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  1. Khansa Diar Raihanita
+                </a>
+              </li>
+              <li>
+                <a href="arumawati/rahma.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  2. Raafi Diar Rahma
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. Detail Yuli Ashofa -->
+        <div id="any-yuli" class="hidden space-y-6 bg-[#FAFAFA] border border-[#FF5F00] p-8 rounded-sm shadow-lg max-w-xl mx-auto my-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <h3 class="font-serif font-bold text-xl text-[#2C2C2C]">Keluarga Yuli Ashofa & Heni Hartanti</h3>
+              <span class="text-xs bg-[#FF5F00]/10 text-[#FF5F00] font-mono px-3 py-1 rounded">Bekasi</span>
+          </div>
+          <div>
+            <a href="yuli/yuli.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              1. Yuli Ashofa
+            </a>
+            <a href="yuli/heni.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+              2. Heni Hartanti
+            </a>
+          </div>
+          <div>
+            <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Daftar Anak:</p>
+            <ul class="space-y-3">
+              <li>
+                <a href="yuli/yumna.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  1. Fattati Yumna Nurjanah
+                </a>
+              </li>
+              <li>
+                <a href="yuli/rucita.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  2. Rucita Marjorie Nurjanah
+                </a>
+              </li>
+              <li>
+                <a href="yuli/najib.html" class="w-full text-left font-semibold p-3 bg-white hover:bg-gray-50 rounded border border-gray-100 flex items-center transition duration-200 text-gray-700 shadow-sm no-underline">
+                  3. Muhammad Najib Alfarisi
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALERI KENANGAN -->
+    <section id="galeri" class="py-20 bg-white border-t border-[#FF5F00]/10">
+      <div class="max-w-6xl mx-auto px-4 py-8">
+  
+  <div class="text-center mb-8">
+    <h2 class="text-2xl" style="font-family: &quot;Chonburi&quot;, serif" text-gray-800">Galeri Album Kebersamaan</h2>
+    <p class="font-montserrat ext-gray-500 mt-1 text-sm">Potret momen kenangan indah keluarga besar.</p>
+  </div>
+
+  <div class="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory scrollbar-none">
+    
+    <div class="flex-none w-full md:w-[calc(33.333%-16px)] snap-start">
+      <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+        <img src="galery/1.jpg" alt="Foto Keluarga 1" 
+          class="w-full h-auto rounded object-cover aspect-[4/3] 
+            transition-transform duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+
+    <div class="flex-none w-full md:w-[calc(33.333%-16px)] snap-start">
+      <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+        <img src="galery/2.jpg" alt="Foto Keluarga 2" 
+          class="w-full h-auto rounded object-cover aspect-[4/3] 
+            transition-transform duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+
+    <div class="flex-none w-full md:w-[calc(33.333%-16px)] snap-start">
+      <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+        <img src="galery/3.jpg" alt="Foto Keluarga 3" 
+          class="w-full h-auto rounded object-cover aspect-[4/3] 
+            transition-transform duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+
+    <div class="flex-none w-full md:w-[calc(33.333%-16px)] snap-start">
+      <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+        <img src="galery/4.jpg" alt="Foto Keluarga 4" 
+          class="w-full h-auto rounded object-cover aspect-[4/3] 
+            transition-transform duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+
+    <div class="flex-none w-full md:w-[calc(33.333%-16px)] snap-start">
+      <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+        <img src="galery/5.jpg" alt="Foto Keluarga 5" 
+          class="w-full h-auto rounded object-cover aspect-[4/3] 
+            transition-transform duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+
+    <div class="flex-none w-full md:w-[calc(33.333%-16px)] snap-start">
+      <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+        <img src="galery/6.jpg" alt="Foto Keluarga 6" 
+          class="w-full h-auto rounded object-cover aspect-[4/3] 
+            transition-transform duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+
+  </div>
+</div>
+    </section>
+
+    <!-- 7. FOOTER SECTION -->
+    <footer class="bg-[#1A1A1A] text-white py-12 border-t-2 border-[#FF5F00]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <h4 class="font-serif text-lg font-bold tracking-wide">Keluarga Besar <span class="text-[#FF5F00]">Rachmad</span></h4>
+        <p class="font-serif italic text-xs text-gray-400">"Selamanya Dekat di Hati, Bersatu dalam Doa."</p>
+        <p class="text-xs text-gray-500">© 2026 Keluarga Besar Rachmad. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- INTERAKTIF JAVASCRIPT UNTUK KLIK KELUARGA -->
+    <script src="https://cdn.tailwindcss.com">
+      tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          vintage: ['"DM Serif Display"', "serif"],
+        },
+      },
+    },
+  }
+</script>
+
+<script>
+  // 1. FUNGSI SILSILAH KELUARGA
+  function bukaKeluarga(idKeluarga) {
+    const listId = ["any-maskith", "any-arin", "any-mawariatul", "any-murdaning", "any-arumawati", "any-yuli"];
+
+    const placeholder = document.getElementById("placeholder-detail");
+    if (placeholder) placeholder.classList.add("hidden");
+
+    listId.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.add("hidden");
+    });
+
+    const targetId = idKeluarga === "yuli" ? "any-yuli" : "any-" + idKeluarga;
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.classList.remove("hidden");
+
+      const detailAnak = document.getElementById("detail-anak");
+      if (detailAnak) {
+        detailAnak.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }
+
+  // 2. FUNGSI MENU MOBILE (HAMBURGER)
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuButton && mobileMenu && hamburgerIcon && closeIcon) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.remove('hidden'); // Memastikan ikon hamburger balik semula
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+  });
+
+// Fungsi untuk membuka profil yang diklik
+function bukaProfil(idOrang) {
+  // 1. Ambil container utama pembungkus detail
+  const sectionDetail = document.getElementById("section-profil-detail");
+  
+  // 2. Sembunyikan semua item profil yang mungkin masih terbuka
+  const semuaProfil = document.querySelectorAll(".profil-item");
+  semuaProfil.forEach(item => item.classList.add("hidden"));
+
+  // 3. Tampilkan kontainer utama detail
+  if (sectionDetail) {
+    sectionDetail.classList.remove("hidden");
+  }
+
+  // 4. Munculkan id target spesifik yang dipilih
+  const targetProfil = document.getElementById("profil-" + idOrang);
+  if (targetProfil) {
+    targetProfil.classList.remove("hidden");
+    
+    // 5. Geser layar otomatis agar fokus melihat biodata yang diklik
+    sectionDetail.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+}
+
+// Fungsi tombol tutup (silang)
+function tutupProfil() {
+  const sectionDetail = document.getElementById("section-profil-detail");
+  if (sectionDetail) {
+    sectionDetail.classList.add("hidden");
+  }
+}
+
+function tampilkanMaskith() {
+    // Sembunyikan petunjuk abu-abu
+    document.getElementById('petunjuk-pilar').classList.add('hidden');
+    
+    // Munculkan daftar keluarga maskith
+    document.getElementById('any-maskith').classList.remove('hidden');
+    
+    // Otomatis scroll halus ke bawah menuju daftarnya
+    document.getElementById('any-maskith').scrollIntoView({ behavior: 'smooth' });
+  }
+
+    </script>
+  </body>
+</html>
